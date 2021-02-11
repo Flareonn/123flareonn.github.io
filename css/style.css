@@ -245,6 +245,7 @@ input[type="submit"] {
 
 svg g text {
   font-family: "Proxima Nova";
+  font-weight: normal;
 }
 
 .header-burger::after,
@@ -369,6 +370,7 @@ svg g text {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
+  color: #5856D6;
 }
 
 .header-account-group li a:visited {
@@ -540,17 +542,12 @@ svg g text {
 .footer-account-copyright {
   margin-top: 36px;
   text-align: center;
-}
-
-.footer-account-copyright span {
   font-size: 16px;
   line-height: 19px;
   color: #FFFFFF;
 }
 
 .footer-account-copyright a {
-  font-size: 14px;
-  line-height: 17px;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
@@ -1120,6 +1117,17 @@ svg g text {
 
   .footer-account-list__link svg {
     margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  .footer-account-list__link {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .footer-account-list__link_numbers {
+    font-size: 21px;
+    line-height: 26px;
   }
 
   .balance-inner {
