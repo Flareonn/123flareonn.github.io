@@ -36,13 +36,15 @@ aside {
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.ttf") format("ttf");
+  src: url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.eot");
+  src: url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Proxima Nova";
-  src: url("../fonts/ProximaNova/ProximaNovaBold/ProximaNovaBold.ttf") format("ttf");
+  src: url("../fonts/ProximaNova/ProximaNovaBold/ProximaNovaBold.eot");
+  src: url("../fonts/ProximaNova/ProximaNovaBold/ProximaNovaBold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype"), url("../fonts/ProximaNova/ProximaNovaBold/ProximaNovaBold.woff") format("woff");
   font-weight: 700;
 }
 
@@ -169,6 +171,9 @@ input[type="submit"] {
 
 .input,
 .withdraw-form__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 1px solid #8E8E93;
   border-radius: 10px;
   padding: 14px 20px;
@@ -176,56 +181,35 @@ input[type="submit"] {
   line-height: 22px;
 }
 
-.label-checkbox {
-  position: relative;
-  cursor: pointer;
-}
-
-.label-checkbox input {
+.checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   position: absolute;
+  z-index: -1;
   opacity: 0;
-  cursor: pointer;
-  height: 0;
+  display: block;
   width: 0;
+  height: 0;
 }
 
-.label-checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #eee;
+.checkbox:checked + .label-checkbox svg > g rect {
+  fill: #ffffff;
+  stroke: #d1d1d6;
 }
 
-.label-checkmark:after {
-  content: "";
-  position: absolute;
+.checkbox:checked + .label-checkbox svg path {
   display: none;
 }
 
-.label-checkbox input:checked ~ .label-checkmark:after {
-  display: block;
-}
-
-.label-checkbox:hover input ~ .label-checkmark {
-  background-color: #ccc;
-}
-
-.label-checkbox input:checked ~ .label-checkmark {
-  background-color: #2196F3;
-}
-
-.label-checkmark:after {
-  top: 4px;
-  left: 8px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.label-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 .header-burger {
@@ -257,6 +241,10 @@ input[type="submit"] {
 
 .header-burger span {
   top: 6px;
+}
+
+svg g text {
+  font-family: "Proxima Nova";
 }
 
 .header-burger::after,
@@ -383,8 +371,13 @@ input[type="submit"] {
   line-height: 22px;
 }
 
+.header-account-group li a:visited {
+  color: #5856D6;
+}
+
 .header-account-group li a svg {
   margin-right: 15px;
+  width: 32px;
 }
 
 .header-account__exit {
@@ -1162,11 +1155,5 @@ input[type="submit"] {
 
   .withdraw-form__input {
     width: 100%;
-  }
-}
-
-@media (max-width: 353px) {
-  .label-checkbox {
-    text-align: center;
   }
 }
