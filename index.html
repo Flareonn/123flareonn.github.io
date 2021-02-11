@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Torus</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <div id="modal-feedback" class="modal modal_lg">
+        <div class="modal__close">
+          <svg class="svg-icon">
+            <use xlink:href="svg/sprite.svg#arrowLeft"></use>
+          </svg>
+        </div>
+        <header class="modal__header">
+          <h2 class="modal__title">Напишите нам</h2>
+        </header>
+        <div class="modal__content">
+          <form class="form modal__form" action="">
+            <div class="form__content request__form-content">
+              <div class="form__fields">
+                <div class="form__field">
+                  <input
+                    name="fullname"
+                    class="text-input"
+                    placeholder="ФИО"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="form__field">
+                  <input
+                    name="phone"
+                    class="text-input"
+                    placeholder="Телефон"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="form__field">
+                  <textarea
+                    name="message"
+                    class="text-input"
+                    placeholder="Сообщение"
+                    rows="4"
+                  ></textarea>
+                </div>
+              </div>
+              <p class="form__note">
+                Нажимая на кнопку, вы даете согласие на обработку своих
+                персональных данных и соглашаетесь с
+                <a class="link link_tertiary link_underline" href="#"
+                  >Пользовательским соглашением</a
+                >
+              </p>
+              <div class="form__submit">
+                <button
+                  class="button button_gradient_primary-secondary"
+                  type="submit"
+                >
+                  Оставить заявку
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__inner-section header__inner-section_left">
+              <a class="logo header__logo" href="#">
+                <span class="logo__title">TFG</span>
+                <span class="logo__description"
+                  >Международная торгово-инвестиционная компания</span
+                >
+              </a>
+            </div>
+            <div class="header__inner-section header__inner-section_right">
+              <nav class="header__nav">
+                <ul class="header__nav-menu">
+                  <li class="header__nav-item">
+                    <a
+                      class="link header__nav-link"
+                      data-anchor
+                      href="#calculation"
+                      >Рассчитать прибыль</a
+                    >
+                  </li>
+                  <li class="header__nav-item">
+                    <a
+                      class="link header__nav-link"
+                      data-anchor
+                      href="#directions"
+                      >Наши направления</a
+                    >
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="link header__nav-link" data-anchor href="#faq"
+                      >FAQ</a
+                    >
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="link header__nav-link" data-anchor href="#footer"
+                      >Контакты</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <a
+                class="button button_outline_white header__button"
+                href="sign-in.html"
+              >
+                <span>Войти в </span>Личный кабинет
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="content">
+        <section id="main" class="section main">
+          <div class="container">
+            <div class="main__inner">
+              <div class="main__info">
+                <h1 class="main__title">
+                  Инвестируйте в реальный сектор экономики и получайте от 25% в
+                  год вне зависимости от кризисов и пандемий!
+                </h1>
+                <p class="main__description">
+                  Уже за 45 дней заработаем сумму равную дивидендам годового
+                  банковского депозита или компенсируем разницу за счет компании
+                </p>
+                <a
+                  class="button button_gradient_primary-secondary main__button"
+                  href="sign-up.html"
+                  >Зарегистрироваться</a
+                >
+                <div class="main__shape"></div>
+              </div>
+              <div class="main__img">
+                <div class="main__img-inner"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="features" class="section features">
+          <div class="container">
+            <div class="section__content">
+              <div class="features__cards">
+                <div class="features__cards-item">
+                  <div class="features__card">
+                    <div class="features__card-icon">
+                      <img
+                        src="svg/icons/feature_deals.svg"
+                        alt="Все сделки застрахованы"
+                      />
+                    </div>
+                    <h4 class="features__card-title">
+                      Все сделки застрахованы
+                    </h4>
+                  </div>
+                </div>
+                <div class="features__cards-item">
+                  <div class="features__card">
+                    <div class="features__card-icon">
+                      <img
+                        src="svg/icons/feature_passive_income.svg"
+                        alt="Пассивный доход"
+                      />
+                    </div>
+                    <h4 class="features__card-title">Пассивный доход</h4>
+                  </div>
+                </div>
+                <div class="features__cards-item">
+                  <div class="features__card">
+                    <div class="features__card-icon">
+                      <img
+                        src="svg/icons/feature_security.svg"
+                        alt="Все юридически прозрачно"
+                      />
+                    </div>
+                    <h4 class="features__card-title">
+                      Все юридически прозрачно
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="calculation" class="section calculation">
+          <div class="container">
+            <header class="section__header section__header_left">
+              <h2 class="section__title">
+                <span class="section__title-text"> Рассчитать прибыль </span>
+              </h2>
+            </header>
+            <div class="section__content">
+              <div class="calculator calculation__calculator">
+                <div class="calculator__section">
+                  <header class="calculator__section-header">
+                    <h4 class="calculator__section-title">
+                      Сумма инвестирования, ($)
+                    </h4>
+                    <strong
+                      id="investment-amount-value"
+                      class="calculator__section-value"
+                      >$10 000</strong
+                    >
+                  </header>
+                  <div class="calculator__section-content">
+                    <input
+                      id="investment-amount-input"
+                      class="range-slider"
+                      type="range"
+                    />
+                  </div>
+                </div>
+                <div class="calculator__section">
+                  <header class="calculator__section-header">
+                    <h4 class="calculator__section-title">Срок</h4>
+                    <strong
+                      id="investment-period-value"
+                      class="calculator__section-value"
+                      >6 иес</strong
+                    >
+                  </header>
+                  <div class="calculator__section-content">
+                    <input
+                      id="investment-period-input"
+                      class="range-slider"
+                      type="range"
+                    />
+                  </div>
+                </div>
+                <div class="calculator__results">
+                  <strong class="calculator__results-profit">$10 000</strong>
+                  <a
+                    class="button button_outline_primary calculator__results-button"
+                    href="#"
+                    >Узнать больше</a
+                  >
+                  <p class="calculator__results-text">
+                    <span
+                      >Прибыль формируется с использованием сложных
+                      процентов</span
+                    >
+                    Пример расчёта носит исключительно информационный характер
+                    <br />
+                    и не является публичной офертой
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="directions" class="section directions">
+          <div class="container">
+            <header
+              class="section__header section__header_left directions__header"
+            >
+              <h2 class="section__title">
+                <span class="section__title-text">
+                  Более 4-х направлений
+                  <br />
+                  инвестирования
+                </span>
+              </h2>
+            </header>
+            <div class="section__content">
+              <div class="directions__cards">
+                <div class="directions__cards-item">
+                  <div class="directions__card">
+                    <div class="directions__card-icon">
+                      <img src="svg/icons/direction_tfg.svg" alt="TFG" />
+                    </div>
+                    <div class="directions__card-info">
+                      <h4 class="directions__card-title">TFG</h4>
+                      <p class="directions__card-text">
+                        Формирование прибыли, привлекая частные инвестиции
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="directions__cards-item">
+                  <div class="directions__card">
+                    <div class="directions__card-icon">
+                      <img src="svg/icons/direction_fooddi.svg" alt="FOODDI" />
+                    </div>
+                    <div class="directions__card-info">
+                      <h4 class="directions__card-title">FOODDI</h4>
+                      <p class="directions__card-text">
+                        Мобильное приложение по доставке продуктов питания
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="directions__cards-item">
+                  <div class="directions__card">
+                    <div class="directions__card-icon">
+                      <img
+                        src="svg/icons/direction_export.svg"
+                        alt="Экспорт продукции"
+                      />
+                    </div>
+                    <div class="directions__card-info">
+                      <h4 class="directions__card-title">Экспорт продукции</h4>
+                      <p class="directions__card-text">
+                        Экспорт продуктов
+                        <br />
+                        питания
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="directions__cards-item">
+                  <div class="directions__card">
+                    <div class="directions__card-icon">
+                      <img
+                        src="svg/icons/direction_mining.svg"
+                        alt="Майнинг ферма"
+                      />
+                    </div>
+                    <div class="directions__card-info">
+                      <h4 class="directions__card-title">Майнинг ферма</h4>
+                      <p class="directions__card-text">
+                        Добыча
+                        <br />
+                        криптовалюты
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="directions__cards-item">
+                  <div class="directions__card">
+                    <div class="directions__card-icon">
+                      <img
+                        src="svg/icons/direction_production.svg"
+                        alt="Производство"
+                      />
+                    </div>
+                    <div class="directions__card-info">
+                      <h4 class="directions__card-title">Производство</h4>
+                      <p class="directions__card-text">
+                        Производство продуктов питания под собственными брендами
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="profit" class="section profit">
+          <div class="container">
+            <header class="section__header section__header_left profit__header">
+              <h2 class="section__title">
+                <span class="section__title-text">Прибыль от 25% в год</span>
+              </h2>
+            </header>
+            <div class="section__content">
+              <div class="profit__cards">
+                <div class="profit__cards-item">
+                  <div class="profit__card">
+                    <div class="profit__card-icon">
+                      <img
+                        src="svg/icons/profit_income.svg"
+                        alt="Вы зарабатываете уже с 1 дня"
+                      />
+                    </div>
+                    <h4 class="profit__card-title">
+                      Вы зарабатываете
+                      <br />
+                      уже с 1 дня
+                    </h4>
+                  </div>
+                </div>
+                <div class="profit__cards-item">
+                  <div class="profit__card">
+                    <div class="profit__card-icon">
+                      <img
+                        src="svg/icons/profit_experience.svg"
+                        alt="Опыт специалистов от 7 лет"
+                      />
+                    </div>
+                    <h4 class="profit__card-title">
+                      Опыт специалистов
+                      <br />
+                      от 7 лет
+                    </h4>
+                  </div>
+                </div>
+                <div class="profit__cards-item">
+                  <div class="profit__card">
+                    <div class="profit__card-icon">
+                      <img
+                        src="svg/icons/profit_deals.svg"
+                        alt="Все сделки застрахованы"
+                      />
+                    </div>
+                    <h4 class="profit__card-title">
+                      Все сделки
+                      <br />
+                      застрахованы
+                    </h4>
+                  </div>
+                </div>
+                <div class="profit__cards-item">
+                  <div class="profit__card">
+                    <div class="profit__card-icon">
+                      <img
+                        src="svg/icons/profit_passive_income.svg"
+                        alt="Пассивный доход"
+                      />
+                    </div>
+                    <h4 class="profit__card-title">
+                      Пассивный
+                      <br />
+                      доход
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="profit" class="section request">
+          <div class="container">
+            <header
+              class="section__header section__header_center request__header"
+            >
+              <h2 class="section__title">
+                <span class="section__title-text">
+                  Инвестируйте в реальный сектор экономики и
+                  <br />
+                  получайте от 25% в год вне зависимости
+                  <br />
+                  от кризисов и пандемий!
+                </span>
+              </h2>
+            </header>
+            <div class="section__content">
+              <form class="form request__form" action="">
+                <header class="form__header">
+                  <h4 class="form__title">
+                    Оставьте заявку и мы свяжемся с Вами в ближайшее время
+                  </h4>
+                </header>
+                <div class="form__content request__form-content">
+                  <div class="form__fields">
+                    <div class="form__field">
+                      <input
+                        name="fullname"
+                        class="text-input"
+                        placeholder="ФИО"
+                        type="text"
+                        required
+                      />
+                    </div>
+                    <div class="form__field">
+                      <input
+                        name="phone"
+                        class="text-input"
+                        placeholder="Телефон"
+                        type="text"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <p class="form__note request__form-note">
+                    Нажимая на кнопку, вы даете согласие на обработку своих
+                    персональных данных и соглашаетесь с
+                    <a class="link link_tertiary link_underline" href="#"
+                      >Пользовательским соглашением</a
+                    >
+                  </p>
+                  <div class="form__submit request__form-submit">
+                    <button
+                      class="button button_gradient_primary-secondary"
+                      type="submit"
+                    >
+                      Оставить заявку
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section id="steps" class="section steps">
+          <div class="container">
+            <header class="section__header section__header_left">
+              <h2 class="section__title">
+                <span class="section__title-text"
+                  >3 простых шага к вашей прибыли</span
+                >
+              </h2>
+            </header>
+            <div class="section__content">
+              <div class="steps__cards">
+                <div class="steps__cards-item">
+                  <div class="steps__card">
+                    <h4 class="steps__card-title">
+                      Оформите документы дистанционно
+                    </h4>
+                    <p class="steps__card-text">
+                      Вам не нужно приезжать в офис
+                      <br />
+                      для оформления Партнёрства
+                      <br />
+                      — оформление онлайн
+                    </p>
+                  </div>
+                </div>
+                <div class="steps__cards-item">
+                  <div class="steps__card">
+                    <h4 class="steps__card-title">
+                      Пополните счет
+                      <br />
+                      через любой удобный для Вас банк
+                    </h4>
+                    <p class="steps__card-text">
+                      Переведите деньги по счёту из любого российского банка.
+                      <br />
+                      Мы не берем комиссию за
+                      <br />
+                      зачисление
+                    </p>
+                  </div>
+                </div>
+                <div class="steps__cards-item">
+                  <div class="steps__card">
+                    <h4 class="steps__card-title">
+                      Зарабатывайте пассивный доход не прикладывая усилий
+                    </h4>
+                    <p class="steps__card-text">
+                      Зарабатывайте вместе с нами не прикладывая усилий, мы всё
+                      сделаем за Вас
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="faq" class="section faq">
+          <div class="container">
+            <header class="section__header section__header_center">
+              <h2 class="section__title">
+                <span class="section__title-text">FAQ</span>
+              </h2>
+            </header>
+            <div class="section__content">
+              <ul class="spoilers-list">
+                <li class="spoilers-list__item">
+                  <div class="spoiler spoiler_active">
+                    <div class="spoiler__inner">
+                      <header class="spoiler__header">
+                        <h4 class="spoiler__title">
+                          Как проходит процесс регистрации?
+                        </h4>
+                        <div class="spoiler__arrow">
+                          <svg class="svg-icon">
+                            <use xlink:href="svg/sprite.svg#chevronDown"></use>
+                          </svg>
+                        </div>
+                      </header>
+                      <div class="spoiler__content">
+                        <p class="spoiler__text">
+                          Пройдите регистрацию на сайте. На вашу электронную
+                          почту придет подтверждение. Зайдите в раздел
+                          "Документы", скачайте договор и заполните его. Скан
+                          копию подписанного договора необходимо отправить в
+                          Компанию на почту torusfg@gmail.com. После проверки
+                          Вам будет отправлен Инвойс (Счет на зачисление
+                          средств).
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="spoilers-list__item">
+                  <div class="spoiler">
+                    <div class="spoiler__inner">
+                      <header class="spoiler__header">
+                        <h4 class="spoiler__title">
+                          Какие гарантии сохранности средств?
+                        </h4>
+                        <div class="spoiler__arrow">
+                          <svg class="svg-icon">
+                            <use xlink:href="svg/sprite.svg#chevronDown"></use>
+                          </svg>
+                        </div>
+                      </header>
+                      <div class="spoiler__content">
+                        <p class="spoiler__text">
+                          Все торговые операции производятся с учётом
+                          диверсификации по различным производителям и группам
+                          товаров. Каждая сделка Компании страхуется от
+                          финансовых рисков в международных страховых компаниях.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="spoilers-list__item">
+                  <div class="spoiler">
+                    <div class="spoiler__inner">
+                      <header class="spoiler__header">
+                        <h4 class="spoiler__title">
+                          Могу ли я в любой момент забрать свои деньги?
+                        </h4>
+                        <div class="spoiler__arrow">
+                          <svg class="svg-icon">
+                            <use xlink:href="svg/sprite.svg#chevronDown"></use>
+                          </svg>
+                        </div>
+                      </header>
+                      <div class="spoiler__content">
+                        <p class="spoiler__text">
+                          Да. После подачи заявки о возврате средств, Компания
+                          производит полный расчёт и обязуется в течении 30
+                          дней, с момента получения заявки, вернуть денежные
+                          средства Партнёра по реквизитам указанным в Договоре.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="spoilers-list__item">
+                  <div class="spoiler">
+                    <div class="spoiler__inner">
+                      <header class="spoiler__header">
+                        <h4 class="spoiler__title">
+                          Можно ли зачислять деньги по своему договору от
+                          третьих лиц?
+                        </h4>
+                        <div class="spoiler__arrow">
+                          <svg class="svg-icon">
+                            <use xlink:href="svg/sprite.svg#chevronDown"></use>
+                          </svg>
+                        </div>
+                      </header>
+                      <div class="spoiler__content">
+                        <p class="spoiler__text">
+                          Мы не рекомендуем подобные операции, так как в
+                          соответствии с законом "115-ФЗ" банки могут
+                          заблокировать денежные средства и потребовать
+                          дополнительные документы, подтверждающие происхождение
+                          средств.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="spoilers-list__item">
+                  <div class="spoiler">
+                    <div class="spoiler__inner">
+                      <header class="spoiler__header">
+                        <h4 class="spoiler__title">Как стать партнером?</h4>
+                        <div class="spoiler__arrow">
+                          <svg class="svg-icon">
+                            <use xlink:href="svg/sprite.svg#chevronDown"></use>
+                          </svg>
+                        </div>
+                      </header>
+                      <div class="spoiler__content">
+                        <p class="spoiler__text">
+                          Оправьте заявку на электронную почту Компании
+                          torusfg@gmail.com. Кратко расскажите о себе. Компания
+                          рассмотрит вашу заявку, направит предложение и
+                          договор. Партнёром может стать каждый, как физическое,
+                          так и юридическое лицо.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer id="footer" class="footer">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__top-section footer__top-section_left">
+              <a class="logo footer__logo" href="#">
+                <span class="logo__title">TFG</span>
+                <span class="logo__description"
+                  >Международная торгово-инвестиционная компания</span
+                >
+              </a>
+              <div class="footer__feedback">
+                <h5 class="footer__feedback-title">
+                  Есть вопросы? Свяжитесь с нами, и мы обязательно ответим
+                </h5>
+                <a
+                  class="button button_white_primary footer__feedback-button"
+                  data-modal
+                  href="#modal-feedback"
+                  >Написать нам</a
+                >
+              </div>
+            </div>
+            <div class="footer__top-section footer__top-section_center">
+              <nav class="footer__nav">
+                <ul class="footer__nav-menu">
+                  <li class="footer__nav-item">
+                    <a
+                      class="link footer__nav-link"
+                      data-anchor
+                      href="#calculation"
+                      >Рассчитать прибыль</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="link footer__nav-link" data-anchor href="#faq"
+                      >FAQ</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      class="link footer__nav-link"
+                      data-anchor
+                      href="#directions"
+                      >Наши направления</a
+                    >
+                  </li>
+                  <li class="footer__nav-item">
+                    <a
+                      class="link footer__nav-link"
+                      data-anchor
+                      href="#contacts"
+                      >Контакты</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__top-section footer__top-section_right">
+              <ul class="footer__contacts">
+                <li class="footer__contacts-item">
+                  <div class="footer__contact">
+                    <div class="footer__contact-icon">
+                      <svg class="svg-icon">
+                        <use xlink:href="svg/sprite.svg#phone"></use>
+                      </svg>
+                    </div>
+                    <strong class="footer__contact-text">
+                      <a
+                        class="link footer__contact-link footer__contact-link_phone"
+                        href="tel:88007707396"
+                        >8 800 770 73 96</a
+                      >
+                    </strong>
+                  </div>
+                </li>
+                <li class="footer__contacts-item">
+                  <div class="footer__contact">
+                    <div class="footer__contact-icon">
+                      <svg class="svg-icon">
+                        <use xlink:href="svg/sprite.svg#pin"></use>
+                      </svg>
+                    </div>
+                    <span class="footer__contact-text"
+                      >г. Краснодар, Северная 464, оф. 38</span
+                    >
+                  </div>
+                </li>
+                <li class="footer__contacts-item">
+                  <div class="footer__contact">
+                    <div class="footer__contact-icon">
+                      <svg class="svg-icon">
+                        <use xlink:href="svg/sprite.svg#envelope"></use>
+                      </svg>
+                    </div>
+                    <span class="footer__contact-text">
+                      <a
+                        class="link footer__contact-link"
+                        href="mailto:torusfg@gmail.com"
+                        >torusfg@gmail.com</a
+                      >
+                    </span>
+                  </div>
+                </li>
+                <li class="footer__contacts-item">
+                  <a class="link link_underline footer__privacy" href="#"
+                    >Политика конфиденциальности</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <span class="footer__copyright">© Copyright 2020</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
